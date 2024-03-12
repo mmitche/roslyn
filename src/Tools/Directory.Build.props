@@ -2,8 +2,5 @@
   <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
   <PropertyGroup>
     <ExcludeFromSourceBuild>true</ExcludeFromSourceBuild>
-    <!-- Exclude from building on OS's that don't have VS SDK tooling. This project references some projects that are excluded
-         on OSs without VS tooling. -->
-    <ExcludeFromBuild Condition="'$(OS)'!= 'Windows_NT'">true</ExcludeFromBuild>
   </PropertyGroup>
 </Project>
