@@ -7,9 +7,6 @@
     <TargetFramework>net472</TargetFramework>
     <UseWpf>true</UseWpf>
     <RootNamespace></RootNamespace>
-    <!-- Exclude from building on OS's that don't have VS SDK tooling. This project references some projects that are excluded
-         on OSs without VS tooling. -->
-    <ExcludeFromBuild Condition="'$(OS)'!= 'Windows_NT'">true</ExcludeFromBuild>
   </PropertyGroup>
   <ItemGroup Label="Project References">
     <ProjectReference Include="..\..\Compilers\Core\Portable\Microsoft.CodeAnalysis.csproj" />
