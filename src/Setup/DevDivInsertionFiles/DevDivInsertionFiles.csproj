@@ -263,8 +263,6 @@
 
   <!--
     Copy NuGet packages to be inserted into VS by the insertion tool.
-    Only run this target on Windows. On non-Windows we don't have the VS SDK tooling available and don't build some projects,
-    and some of the ExpectedDependencies may not have been restored if the VS SDK components are not built.
   -->
   <Target Name="_CopyPackagesToInsert"
           BeforeTargets="AfterBuild"
