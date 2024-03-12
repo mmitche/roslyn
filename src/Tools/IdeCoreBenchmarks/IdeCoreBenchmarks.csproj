@@ -18,6 +18,9 @@
          See https://github.com/dotnet/arcade/blob/main/Documentation/UnifiedBuild/Unified-Build-Controls.md for information
          on controls. -->
     <ExcludeFromDotNetBuild Condition="'$(DotNetBuildTests)' != 'true'">true</ExcludeFromDotNetBuild>
+    <!-- Exclude from building on OS's that don't have VS SDK tooling. This project references some projects that are excluded
+         on OSs without VS tooling. -->
+    <ExcludeFromBuild Condition="'$(OS)'!= 'Windows_NT'">true</ExcludeFromBuild>
   </PropertyGroup>
 
   <ItemGroup>
