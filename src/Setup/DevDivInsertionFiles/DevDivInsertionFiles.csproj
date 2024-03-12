@@ -268,7 +268,7 @@
   -->
   <Target Name="_CopyPackagesToInsert"
           BeforeTargets="AfterBuild"
-          Condition="'$(Configuration)' == 'Release' and '$(ContinuousIntegrationBuild)' == 'true' and '$(OS)' == 'Windows_NT'"
+          Condition="'$(Configuration)' == 'Release' and '$(ContinuousIntegrationBuild)' == 'true'"
           DependsOnTargets="_CalculateDependenciesToInsert;_UnpackDependencies;ApplyOptimizations">
 
     <PropertyGroup>
