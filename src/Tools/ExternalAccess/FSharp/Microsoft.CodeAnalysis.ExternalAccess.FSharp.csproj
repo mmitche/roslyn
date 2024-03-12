@@ -13,9 +13,6 @@
       A supporting package for F#:
       https://github.com/Microsoft/visualfsharp
     </PackageDescription>
-    <!-- Exclude from building on OS's that don't have VS SDK tooling. This project references some projects that are excluded
-         on OSs without VS tooling. -->
-    <ExcludeFromBuild Condition="'$(OS)'!= 'Windows_NT'">true</ExcludeFromBuild>
   </PropertyGroup>
 
   <ItemGroup>
